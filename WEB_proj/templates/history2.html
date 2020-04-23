@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/style2.css">
+    <title>Title</title>
+    <style>
+        header{
+ width: 100%;
+ background: #808080;
+ background: #808080 url(/static/icon/test_06.png) no-repeat 2% 50%;
+ height: 100px;
+ position: relative
+}
+.title{
+ font-size: 36px;
+ padding-top: 10px;
+ text-align: center;
+}
+.menu{
+ list-style: none;
+ position: absolute;
+ top: 10px;
+ right: 100px;
+}
+p{
+  font-size: 22px;
+  text-align: center;
+}
+.fig{
+    text-align: center;
+}
+
+body{
+    background: #bbbbbb;
+}
+.border_style_outset{
+	border: 5px outset #000000;
+	padding: 3px;
+	margin-bottom: 5px;
+	border-radius:10px;
+	}
+
+
+    </style>
+</head>
+
+<body>
+<div class="border_style_outset">
+    <header>
+        <div class="title">Alternative History</div>
+        <ul class="menu">
+            <li><a href="/hello_page">-Вернуться на главную</a></li>
+            <br>
+            <li><a href="/help_quiz_page">-Помощь</a></li>
+        </ul>
+    </header>
+
+    <table
+            align="center"
+            rules="rows"
+            style="width:90%;">
+        <!--Создаём строку-->
+        <tr></tr>
+        <tr>
+            <!--Создаём ячейку строки-->
+            <td>
+                <p class="fig"><img src="/static/img/test1.png"
+                                    alt="Какая-то картинка"/></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Тут у нас какой-то текст будет вроде...
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    А Тут Кнопки, количество которых я не знаю как менять от
+                    переменной<br>
+                    <form>
+                <p><input type="button" size="50" value=" №1 "></p>
+                <p><input type="button" size="50" value=" №2 "></p>
+                <p><input type="button" size="50" value=" №3 "></p>
+                <p><input type="button" size="50" value=" №4 "></p>
+                </form>
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
+<footer>
+    copyright © 2020 by Кирилл and Максим.<br>
+    Все права защищены<br>
+    Запрещено любое копирование материалов ресурса без письменного согласия
+    владельцев
+</footer>
+</body>
+</html>
