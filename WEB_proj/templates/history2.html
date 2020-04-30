@@ -65,28 +65,29 @@ body{
         <tr>
             <!--Создаём ячейку строки-->
             <td>
+                <p>Какая-то картинка..</p>
                 <p class="fig"><img src="/static/img/test1.png"
                                     alt="Какая-то картинка"/></p>
+                <!--{{picture}}-->
             </td>
         </tr>
         <tr>
             <td>
                 <p>
                     Тут у нас какой-то текст будет вроде...
+                    <!--{{text}}-->
                 </p>
             </td>
         </tr>
         <tr>
             <td>
                 <p>
-                    А Тут Кнопки, количество которых я не знаю как менять от
-                    переменной<br>
+                    А Тут Кнопки<br>
                     <form>
-                <p><input type="button" size="50" value=" №1 "></p>
-                <p><input type="button" size="50" value=" №2 "></p>
-                <p><input type="button" size="50" value=" №3 "></p>
-                <p><input type="button" size="50" value=" №4 "></p>
-                </form>
+                        {% for i in range(buttons_number)%}
+                            <p><input type="button" size="50" value="Кнопка {{loop.index}}"/></p>
+                        {% endfor %}
+                    </form>
                 </p>
             </td>
         </tr>
