@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final</title>
+    <link rel="shortcut icon" href="/static/icon/flag.png" type="image/png">
+    <style>header{
+ width: 100%;
+ background: #808080;
+ background: #808080 url(/static/icon/test_06.png) no-repeat 2% 50%;
+ height: 100px;
+ position: relative
+}
+.title{
+ font-size: 36px;
+ padding-top: 10px;
+ text-align: center;
+}
+.menu{
+ list-style: none;
+ position: absolute;
+ top: 10px;
+ right: 100px;
+}
+p{
+  font-size: 22px;
+  text-align: center;
+}
+.fig{
+    text-align: center;
+}
+
+body{
+    background: #bbbbbb;
+}
+.border_style_outset{
+	border: 5px outset #000000;
+	padding: 3px;
+	margin-bottom: 5px;
+	border-radius:10px;
+	}
+a{
+    font-size: 20px
+    text-align: right
+}
+.graph, .graph tr, .graph td  {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: bottom;
+    text-align: center;
+}
+.graph  {
+    border: 1px solid silver;
+}
+.graph_col    {
+    text-align: center;
+}
+.graph_col div    {
+    width: 35px;
+    margin: 5px 10px;
+}
+.graph_legend td {
+ background-color: #a1a1a1;
+ color: black;
+ padding: 2px;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="border_style_outset">
+    <header>
+        <div class="title">Альтернативная история</div>
+        <ul class="menu">
+            <li><a href="/hello_page">-Вернуться на главную</a></li>
+            <li></li>
+        </ul>
+    </header>
+    <table
+            align="center"
+            rules="rows"
+            style="width:90%;">
+        <!--Создаём строку-->
+        <tr>
+            <td>
+                <h1 align="center">Поздравляем, вы дошли до конца!<br></h1>
+            </td>
+        </tr>
+
+        <tr>
+            <!--Создаём ячейку строки-->
+            <td>
+                <h2 align="center">Вы настоящий знаток истории, и знаете, что из
+                    альтернативного могло бы быть
+                    лучше реального!</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {% for i in (final_text)%}
+                <p>{{i}}</p>
+                {% endfor %}
+            </td>
+            <td>
+                <p>Очки распределения сил:</p><br>
+                <table class="graph" cellspacing="0px">
+                    <tr>
+                        <td class="graph_col" style="color: white">
+                            <div style="height: {{points_USA}}px; background-color: #4c94e0">
+                                {{points_USA}}
+                            </div>
+                        </td>
+                        <td class="graph_col" style="color: black">
+                            <div style="height: {{points_RUSSIA}}px; background-color: #ff4e33">
+                                {{points_RUSSIA}}
+                            </div>
+                        </td>
+                        <td class="graph_col" style="color: white">
+                            <div style="height: {{points_GERMANY}}px; background-color: #000000">
+                                {{points_GERMANY}}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="graph_legend">
+                        <td>США</td>
+                        <td>Россия</td>
+                        <td>Германия</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Успехов в изучении альтернативной истории, спасибо за
+                    визит!</p>
+            </td>
+        </tr>
+    </table>
+</div>
+<footer>
+    copyright © 2020 by Кирилл and Максим.<br>
+    Все права защищены<br>
+    Запрещено любое копирование материалов ресурса без письменного согласия
+    владельцев
+</footer>
+<p>
+    <audio controls autoplay="autoplay" loop>
+        <source src="/static/music/w_music.mp3" type="audio/mpeg">
+    </audio>
+</p>
+</body>
+</html>

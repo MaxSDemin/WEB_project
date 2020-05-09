@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/style2.css">
+    <title>Welcome to quiz</title>
+    <style>
+        header{
+ width: 100%;
+ background: #808080;
+ background: #808080 url(/static/icon/test_06.png) no-repeat 2% 50%;
+ height: 100px;
+ position: relative
+}
+.title{
+ font-size: 36px;
+ padding-top: 10px;
+ text-align: center;
+}
+.menu{
+ list-style: none;
+ position: absolute;
+ top: 10px;
+ right: 100px;
+}
+p{
+  font-size: 22px;
+  text-align: center;
+}
+.fig{
+    text-align: center;
+}
+
+body{
+    background: #bbbbbb;
+}
+.border_style_outset{
+	border: 5px outset #000000;
+	padding: 3px;
+	margin-bottom: 5px;
+	border-radius:10px;
+	}
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+<div class="border_style_outset">
+    <header>
+        <div class="title">Альтернативная история</div>
+        <ul class="menu">
+            <li><a href="/hello_page">-Вернуться на главную</a></li>
+            <br>
+            <li><a href="/help_quiz_page">-Помощь</a></li>
+        </ul>
+    </header>
+
+    <table
+            align="center"
+            rules="rows"
+            style="width:90%;">
+        <!--Создаём строку-->
+        <tr>
+            <td>
+                <p>Добро пожаловать!<br><br>Этот квиз о том, как события могут
+                    повлиять на историю</p>
+            </td>
+        </tr>
+        <tr>
+            <!--Создаём ячейку строки-->
+            <td>
+                <p class="fig"><img src="/static/img/w_q_1.jpg"
+                                    alt="Какая-то картинка" height="523"
+                                    width="960"/></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Переход на страницу с квизом: <br>
+                </p>
+                <center>
+                    <form action="/history">
+                        <br><a><input type="submit" name="answer"
+                                      value="ПОЕХАЛИ!"></a>
+                    </form>
+                </center>
+                <br>
+            </td>
+        </tr>
+    </table>
+</div>
+<footer>
+    copyright © 2020 by Кирилл and Максим.<br>
+    Все права защищены<br>
+    Запрещено любое копирование материалов ресурса без письменного согласия
+    владельцев
+</footer>
+</body>
+</html>

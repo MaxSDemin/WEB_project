@@ -1,0 +1,1 @@
+print('vodka' + '\n' + 'balayka')

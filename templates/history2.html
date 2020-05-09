@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/style2.css">
+    <title>Quiz</title>
+    <style>
+        header{
+ width: 100%;
+ background: #808080;
+ background: #808080 url(/static/icon/test_06.png) no-repeat 2% 50%;
+ height: 100px;
+ position: relative
+}
+.title{
+ font-size: 36px;
+ padding-top: 10px;
+ text-align: center;
+}
+.menu{
+ list-style: none;
+ position: absolute;
+ top: 10px;
+ right: 100px;
+}
+p{
+  font-size: 22px;
+  text-align: center;
+}
+.fig{
+    text-align: center;
+}
+
+body{
+    background: #bbbbbb;
+}
+.border_style_outset{
+	border: 5px outset #000000;
+	padding: 3px;
+	margin-bottom: 5px;
+	border-radius:10px;
+	}
+a{
+    font-size: 20px
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+<div class="border_style_outset">
+    <header>
+        <div class="title">Альтернативная история</div>
+        <ul class="menu">
+            <li><a href="/hello_page">-Вернуться на главную</a></li>
+            <br>
+            <li><a href="/help_quiz_page" target="_blank">-Помощь</a></li>
+        </ul>
+    </header>
+
+    <table
+            align="center"
+            rules="rows"
+            style="width:90%;">
+        <!--Создаём строку-->
+
+        <tr>
+            <!--Создаём ячейку строки-->
+            <td>
+                <!--<p>Картинка..</p>-->
+                <p class="fig"><img src={{picture_address}} width="1280" height="720"
+                                    alt="Какая-то картинка"/></p>
+                <p>Текст:</p>
+                <p>{{text}}<br></p>
+                <!--{{picture}}-->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!--<p>
+                    Кол-во кнопок: {{buttons_count}}<br>
+                    Ссылка на картинку: {{picture_address}}<br>
+                    Текст: {{text}}<br>
+                    Была нажата кнопка: {{pressed_button}}
+                </p>-->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <center><a>Варианты дальнейшего развития:<br></a>
+                    <form action="">
+                        {% for i in range(buttons_count)%}
+                        <br><input type="radio" name="answer"
+                                   value="{{loop.index}}"><a>{{text_button[loop.index-1]}}</a>
+                        <!-- <p><input type="button" size="50" value="Кнопка {{loop.index}}"/></p> -->
+                        {% endfor %}
+                        <br><a><input type="submit" value="OK"></a>
+                    </form>
+                </center>
+                <p>
+
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
+<footer>
+    copyright © 2020 by Кирилл and Максим.<br>
+    Все права защищены<br>
+    Запрещено любое копирование материалов ресурса без письменного согласия
+    владельцев<br><br>
+    <!--<a>Музыка:</a><br>
+    <audio controls style="width:100%;max-width:600px;" loop>
+        <source src="/static/music/w_music.mp3" type="audio/mp3">
+        Тег audio не поддерживается вашим браузером.
+    </audio>-->
+</footer>
+</body>
+</html>
